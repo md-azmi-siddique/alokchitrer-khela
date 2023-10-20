@@ -1,29 +1,7 @@
-.header {
-  display: flex;
-  align-items: center;
-}
-
-.header img {
+img {
   height: 100px;
-  padding-left: 50px;
-  padding-top: 10px;
 }
 
-.search-box {
-  margin-left: 20px; /* Adjust this value to control the spacing between the image and the search box. */
+.item-search-box{
+  border: 1px solid red;
 }
-
-/* You can further style the input and button as needed. */
-.search-box input {
-  padding: 5px;
-  width: 900px; /* Adjust the width as needed. */
-  height: 50px;
-  border: 3px solid black;
-  border-radius: 10px;
-  font-size: 40px;
-}
-
-.createAccount{
-    padding-left: 20px;
-}
-
