@@ -1,7 +1,12 @@
 img {
   height: 100px;
 }
-
-.item-search-box{
-  border: 1px solid red;
+.header{
+  font-size: large;
+  font-weight: bold;
 }
+
+/* Header.css */
+/* .custom-navbar {
+  background-color: red !important; 
+} */

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../Assets/logo.jpg";
+import logo from "../../Assets/logo.png";
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -11,10 +11,10 @@ import './Header.css'
 
 function Header() {
   return (
-    
-    <div className="container">
+    <div className="header">
+      
       {['sm'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
+        <Navbar data-bs-theme="dark" key={expand} expand={expand} className="custom-navbar bg-body-tertiary mb-3">
           <Container fluid>
             <Navbar.Brand href="#"><img src={logo} alt="" /></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -61,7 +61,8 @@ function Header() {
           </Container>
         </Navbar>
       ))}
-    </div>
+      </div>
+    
   );
 }
 
