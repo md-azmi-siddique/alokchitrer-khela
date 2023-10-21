@@ -16,7 +16,7 @@ const HeroDesign = () => {
         interval={5000}
         className="custom-carousel"
       >
-        {carouselItem.slice(10, 22).map((citem) => (
+        {carouselItem.slice(1, 3).map((citem) => (
           <Carousel.Item className="custom-carousel-item" key={citem.key}>
             <div className="centered-content">
               <img
