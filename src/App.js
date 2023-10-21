@@ -7,7 +7,6 @@ function App() {
   return (
     <div>
       <Header></Header>
-      
       <HeroDesign></HeroDesign>
 
     </div>
