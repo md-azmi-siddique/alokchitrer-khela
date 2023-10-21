@@ -1,0 +1,19 @@
+.heroSlide {
+  padding: 10px 50px;
+}
+
+.heroSlide .custom-carousel {
+  transition-duration: 0.5s; /* Adjust the duration as needed */
+}
+
+/* Customize the Carousel.Item component */
+.heroSlide .custom-carousel-item {
+  transition-delay: 0.25s; /* Adjust the delay as needed */
+}
+
+/* Customize the image inside the Carousel.Item */
+.heroSlide .custom-carousel-image {
+  width: 400px; /* Set the width to 400px */
+  height: 400px; /* Set the height to 400px */
+  object-fit: cover; /* Maintain the image's aspect ratio and cover the container */
+}

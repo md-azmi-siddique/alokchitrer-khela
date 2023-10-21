@@ -1,13 +1,14 @@
 import './App.css';
 import Header from './Components/Header/Header';
-import Hero from './Components/Hero/Hero';
+import HeroDesign from './Components/HeroDesing/HeroDesign';
 
 
 function App() {
   return (
     <div>
       <Header></Header>
-      <Hero></Hero>
+      
+      <HeroDesign></HeroDesign>
 
     </div>
   );
