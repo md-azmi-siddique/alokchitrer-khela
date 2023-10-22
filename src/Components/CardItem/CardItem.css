@@ -1,0 +1,10 @@
+.card-list-container {
+    /* display: flex; */
+    /* Add any additional CSS styles for alignment and spacing here */
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  .card-base{
+    margin: 20px;
+  }

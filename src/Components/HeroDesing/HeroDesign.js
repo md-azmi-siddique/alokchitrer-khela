@@ -1,29 +1,24 @@
-import React, { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
-import carouselItemData from "../../Data/carouselItemData.json";
 import "./HeroDesign.css";
 
-const HeroDesign = () => {
-  // console.log(carouselItemData);
-  const [carouselItem, setCarouselItem] = useState([]);
-  useEffect(() => {
-    setCarouselItem(carouselItemData);
-  }, []);
+const HeroDesign = (props) => {
+  console.log('this is props inside HeroDesign' + props)
+  const { carouselItem } = props;
+
   return (
     <div className="heroSlide">
       <Carousel
-        defaultActiveIndex={0}
-        interval={5000}
+        defaultActiveIndex={1}
+        interval={1000}
         className="custom-carousel"
       >
-        {carouselItem.slice(1, 10).map((citem) => (
-          <Carousel.Item className="custom-carousel-item" key={citem.key}>
+        {carouselItem.slice(0,5).map(item => (
+          <Carousel.Item className="custom-carousel-item" key={item.key}>
             <div className="centered-content">
               <img
-                src={citem.img}
+                src={item.img}
                 className="img-fluid custom-carousel-image"
                 alt=""
-                // style={{ width: "1200px", height: "500px" }}
               />
             </div>
           </Carousel.Item>
