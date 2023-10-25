@@ -8,7 +8,7 @@ const CardItem = (props) => {
   const { cardItemList } = props;
 
   // Slice the first 5 items
-  const firstItems = cardItemList.slice(10, 15);
+  const firstItems = cardItemList.slice(0, 50);
 
   // Chunk the first 5 card items into rows of 3
   const chunkedCardItems = [];
