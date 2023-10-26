@@ -1,43 +1,44 @@
-import "./App.css";
+import './App.css';
 import React, { useEffect, useState } from "react";
-import Header from "./Components/Header/Header";
-import HeroDesign from "./Components/HeroDesing/HeroDesign";
-import CardItem from "./Components/CardItem/CardItem";
-import Error404 from "./Components/Error404/Error404";
-import FeatureProducts from './Components/FeatureProducts/FeatureProducts'
-import carouselItemData from "./Data/carouselItemData.json";
-import catagoriesItemData from "./Data/catagoriesItemData.json";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from './Components/Header/Header';
+import HeroDesign from './Components/HeroDesing/HeroDesign';
+import CardItem from './Components/CardItem/CardItem';
+import FeatureProducts from './Components/FeatureProducts/FeatureProducts';
+import data from "./Data/carouselItemData.json";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 function App() {
   const [carouselItem, setCarouselItem] = useState([]);
   useEffect(() => {
-    setCarouselItem(carouselItemData);
-  }, []);
-
-  const [catagoriesItem, setCatagoriesItem] = useState([]);
-  useEffect(() => {
-    setCatagoriesItem(catagoriesItemData);
+    setCarouselItem(data);
   }, []);
 
   return (
     <div>
-      <Header />
+          <Header></Header>
+      
       <Router>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <React.Fragment>
-                <HeroDesign carouselItem={carouselItem} />
-                <CardItem cardItemList={catagoriesItem} />
-                <FeatureProducts featureItem={carouselItem}></FeatureProducts>
-              </React.Fragment>
-            }
-          />
-          <Route path="*" element={<Error404 />} />
-        </Routes>
+      <Switch>
+      {/* <Route exact path="/" component={HomePage} /> */}
+          <Route exact path="/">
+            <HeroDesign carouselItem={carouselItem}></HeroDesign>
+            <CardItem cardItemList={carouselItem}></CardItem>
+            <FeatureProducts featureItem={carouselItem}></FeatureProducts>
+          </Route>
+          <Route path="/Link">
+          <CardItem cardItemList={carouselItem}></CardItem>
+          </Route>
+
+        </Switch>
+
       </Router>
+
+      
+
     </div>
   );
 }

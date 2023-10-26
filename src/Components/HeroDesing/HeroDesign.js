@@ -2,8 +2,9 @@ import { Carousel } from "react-bootstrap";
 import "./HeroDesign.css";
 
 const HeroDesign = (props) => {
-  console.log('this is props inside HeroDesign' + props)
+  // console.log('this is props inside HeroDesign' + props)
   const { carouselItem } = props;
+  // console.log(carouselItem)
 
   return (
     <div className="heroSlide">

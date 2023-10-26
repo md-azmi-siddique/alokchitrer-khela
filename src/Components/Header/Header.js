@@ -12,9 +12,8 @@ import './Header.css'
 function Header() {
   return (
     <div className="header">
-      
       {['sm'].map((expand) => (
-        <Navbar data-bs-theme="dark" key={expand} expand={expand} className="custom-navbar bg-body-tertiary mb-3">
+        <Navbar data-bs-theme="dark" key={expand} expand={expand} className="custom-navbar bg-body-tertiary mb-3" id="navBar">
           <Container fluid>
             <Navbar.Brand href="#"><img src={logo} alt="" /></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
