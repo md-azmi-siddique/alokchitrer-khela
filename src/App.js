@@ -4,6 +4,7 @@ import Header from "./Components/Header/Header";
 import HeroDesign from "./Components/HeroDesing/HeroDesign";
 import CardItem from "./Components/CardItem/CardItem";
 import Error404 from "./Components/Error404/Error404";
+import FeatureProducts from './Components/FeatureProducts/FeatureProducts'
 import carouselItemData from "./Data/carouselItemData.json";
 import catagoriesItemData from "./Data/catagoriesItemData.json";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -30,6 +31,7 @@ function App() {
               <React.Fragment>
                 <HeroDesign carouselItem={carouselItem} />
                 <CardItem cardItemList={catagoriesItem} />
+                <FeatureProducts featureItem={carouselItem}></FeatureProducts>
               </React.Fragment>
             }
           />

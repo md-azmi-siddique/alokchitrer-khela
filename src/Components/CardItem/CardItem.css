@@ -1,10 +1,19 @@
+.heading{
+  text-align: center;
+  font-weight: bold;
+}
 .card-list-container {
-    /* display: flex; */
-    /* Add any additional CSS styles for alignment and spacing here */
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-  
-  .card-base{
-    margin: 20px;
-  }
+  /* display: flex; */
+  /* Add any additional CSS styles for alignment and spacing here */
+  margin-left: 100px;
+  margin-right: 100px;
+  border: none;
+}
+
+.card-base {
+  margin: 20px;
+}
+
+Card {
+  border: none;
+}
