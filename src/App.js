@@ -3,13 +3,14 @@ import React, { useEffect, useState } from "react";
 import Header from './Components/Header/Header';
 import HeroDesign from './Components/HeroDesing/HeroDesign';
 import CardItem from './Components/CardItem/CardItem';
-import FeatureProducts from './Components/FeatureProducts/FeatureProducts';
+
 import data from "./Data/carouselItemData.json";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+import FeatureProducts from './Components/FeatureProducts/FeatureProducts';
 
 function App() {
   const [carouselItem, setCarouselItem] = useState([]);

@@ -2,3 +2,13 @@ span{
     color: black;
     font-weight: bolder;
 }
+
+.featureProducts{
+    margin-top: 200px;
+    /* border: 1px solid red; */
+    
+}
+
+.featureProducts .row{
+    float: left;
+}

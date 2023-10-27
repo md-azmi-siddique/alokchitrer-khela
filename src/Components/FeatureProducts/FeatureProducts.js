@@ -1,50 +1,36 @@
 import React from "react";
-import './FeatureProducts.css'
-import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import "./FeatureProducts.css";
 
-const CardItem = (props) => {
+const FeatureProducts = (props) => {
   const { featureItem } = props;
-  console.log(featureItem)
-
-  // Slice the first 5 items
-  const firstItems = featureItem.slice(0, 15);
-
-  // Chunk the first 5 card items into rows of 3
-  const chunkedCardItems = [];
-  for (let i = 0; i < firstItems.length; i += 3) {
-    chunkedCardItems.push(firstItems.slice(i, i + 3));
-  }
 
   return (
-    <div className="container">
-    
-    <div className="card-list-container">
-      {chunkedCardItems.map((row, rowIndex) => (
-        <Row key={rowIndex} className="card-row-container">
-          {row.map((item, itemIndex) => (
-            <Col key={itemIndex} md={4}>
-              <Card className="mr-3 card-base card-list-container">
-                <Card.Img variant="top" src={item.img} />
-                <Card.Body>
-                  <Card.Title>{item.name}</Card.Title>
-                  <Card.Text>
-                    {item.description}
-                  </Card.Text>
-                </Card.Body>
-                <Card.Footer>
-                  <small className="text-muted"><span id="price">Price: {item.price} BDT</span></small>
-                </Card.Footer>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      ))}
-    </div>
-    </div>
-    
+    <>
+      <div className="container">
+        <h1>Featured Products</h1>
+        <div className="d-flex flex-row mb-3 justify-content-center align-content-start flex-wrap">
+          <div class="row row-cols-4 g-4">
+            {featureItem.slice(20, 60).map((item) => (
+              <div class="col col-6 col-md-3">
+                <div class="card h-100">
+                  <img src={item.img} class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">{item.seller}</h5>
+                    <p class="card-text">
+                      {item.name}
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>Price: {item.price}</b></small>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
   );
-}
+};
 
-export default CardItem;
+export default FeatureProducts;
