@@ -6,7 +6,7 @@ const CardItem = (props) => {
   // console.log(cardItemList);
 
   return (
-    <div className="container">
+    <div className="container ">
       <div className="heading">
         <h5>Featured Category</h5>
         <h6>Get Your Desired Product from Featured Category!</h6>
