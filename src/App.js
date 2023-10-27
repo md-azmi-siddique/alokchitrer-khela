@@ -31,8 +31,8 @@ function App() {
             {/* need to solbe feature product */}
             <FeatureProducts featureItem={carouselItem}></FeatureProducts>
           </Route>
-          <Route path="/Link">
-          <CardItem cardItemList={carouselItem}></CardItem>
+          <Route path="/FeaturedProducts">
+          <FeatureProducts featureItem={carouselItem}></FeatureProducts>
           </Route>
 
         </Switch>
