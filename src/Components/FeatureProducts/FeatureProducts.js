@@ -1,5 +1,6 @@
 import React from "react";
 import "./FeatureProducts.css";
+import { Link } from "react-router-dom";
 
 const FeatureProducts = (props) => {
   const { featureItem } = props;
@@ -17,7 +18,7 @@ const FeatureProducts = (props) => {
                   <div class="card-body">
                     <h5 class="card-title">{item.seller}</h5>
                     <p class="card-text">
-                      {item.name}
+                    <Link to={'/product/'+item.key}>{item.name}</Link>
                     </p>
                   </div>
                   <div class="card-footer">

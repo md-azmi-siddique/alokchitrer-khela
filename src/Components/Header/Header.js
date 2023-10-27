@@ -1,21 +1,31 @@
 import React from "react";
 import logo from "../../Assets/logo.png";
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import './Header.css'
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import "./Header.css";
 
 function Header() {
   return (
     <div className="header">
-      {['sm'].map((expand) => (
-        <Navbar data-bs-theme="dark" key={expand} expand={expand} className="custom-navbar bg-body-tertiary mb-3" id="navBar">
+      {["sm"].map((expand) => (
+        <Navbar
+          data-bs-theme="dark"
+          key={expand}
+          expand={expand}
+          className="custom-navbar bg-body-tertiary mb-3"
+          id="navBar"
+        >
           <Container fluid>
-            <Navbar.Brand href="#"><img src={logo} alt="" /></Navbar.Brand>
+            <Navbar.Brand href="#">
+              <img src={logo} alt="" />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -23,14 +33,16 @@ function Header() {
               placement="end"
             >
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  
-                </Offcanvas.Title>
+                <Offcanvas.Title
+                  id={`offcanvasNavbarLabel-expand-${expand}`}
+                ></Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="/FeaturedProducts">Featured Products</Nav.Link>
+                  <Nav.Link href="/FeaturedProducts">
+                    Featured Products
+                  </Nav.Link>
                   <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -51,17 +63,23 @@ function Header() {
                     placeholder="Search"
                     className="me-2 "
                     aria-label="Search"
-                    style={{ width: '500px' }}
+                    style={{ width: "200px" }}
                   />
-                  <Button variant="outline-success" className="d-flex">Search</Button>
+                  <Button variant="outline-success" className="d-flex">
+                    Search
+                  </Button>
                 </Form>
+                <button className="button-primary">
+                <FontAwesomeIcon icon={faCartShopping} size="lg" style={{ color: "#c59716" }} />
+                </button>
+
               </Offcanvas.Body>
             </Navbar.Offcanvas>
+          
           </Container>
         </Navbar>
       ))}
-      </div>
-    
+    </div>
   );
 }
 

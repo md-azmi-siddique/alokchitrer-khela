@@ -6,6 +6,16 @@ img {
   font-weight: bold;
 }
 
+.button-primary{
+  background-color: transparent; 
+  border: none;
+  margin-left: 20px;
+  margin-right: 25px;
+}
+
+.button-primary:hover{
+  background-color: whitesmoke;
+}
 
 /* Header.css */
 /* .custom-navbar {
