@@ -27,6 +27,7 @@ function App() {
           <Route exact path="/">
             <HeroDesign carouselItem={carouselItem}></HeroDesign>
             <CardItem cardItemList={carouselItem}></CardItem>
+            {/* need to solbe feature product */}
             <FeatureProducts featureItem={carouselItem}></FeatureProducts>
           </Route>
           <Route path="/Link">

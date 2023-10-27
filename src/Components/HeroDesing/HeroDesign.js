@@ -7,7 +7,7 @@ const HeroDesign = (props) => {
   // console.log(carouselItem)
 
   return (
-    <div className="heroSlide">
+    <div className="container heroSlide">
       <Carousel
         defaultActiveIndex={1}
         interval={1000}

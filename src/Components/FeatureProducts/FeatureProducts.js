@@ -18,7 +18,7 @@ const CardItem = (props) => {
   }
 
   return (
-    <>
+    <div className="container">
     
     <div className="card-list-container">
       {chunkedCardItems.map((row, rowIndex) => (
@@ -42,7 +42,7 @@ const CardItem = (props) => {
         </Row>
       ))}
     </div>
-    </>
+    </div>
     
   );
 }

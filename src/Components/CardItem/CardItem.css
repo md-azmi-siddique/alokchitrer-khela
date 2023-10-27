@@ -2,18 +2,13 @@
   text-align: center;
   font-weight: bold;
 }
-.card-list-container {
-  /* display: flex; */
-  /* Add any additional CSS styles for alignment and spacing here */
-  margin-left: 100px;
-  margin-right: 100px;
-  border: none;
+
+.category{
+  /* border: 2px solid red !important; */
+  box-shadow: gray ;
+  margin: 2px !important;
 }
 
-.card-base {
-  margin: 20px;
-}
-
-Card {
-  border: none;
+.category h5{
+  text-align: center;
 }
