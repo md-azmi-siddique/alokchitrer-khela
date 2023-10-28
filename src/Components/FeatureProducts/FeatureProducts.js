@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const FeatureProducts = (props) => {
   const { featureItem } = props;
+  console.log(featureItem)
 
   return (
     <>
@@ -18,7 +19,7 @@ const FeatureProducts = (props) => {
                   <div class="card-body">
                     <h5 class="card-title">{item.seller}</h5>
                     <p class="card-text">
-                    <Link to={'/product/'+item.key}>{item.name}</Link>
+                    <Link to={'/product/' + item.key}>{item.name}</Link>
                     </p>
                   </div>
                   <div class="card-footer">

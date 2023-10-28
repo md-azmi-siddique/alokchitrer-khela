@@ -22,21 +22,20 @@ function App() {
 
       <Router>
         <Switch>
-          {/* <Route exact path="/" component={HomePage} /> */}
           <Route exact path="/">
             <HeroDesign carouselItem={carouselItem}></HeroDesign>
             <CardItem cardItemList={carouselItem}></CardItem>
-            {/* need to solbe feature product */}
             <FeatureProducts featureItem={carouselItem}></FeatureProducts>
           </Route>
           <Route path="/FeaturedProducts">
             <FeatureProducts featureItem={carouselItem}></FeatureProducts>
           </Route>
-          <Route path="*">
-            <Error404></Error404>
-          </Route>
           <Route path="/product/:productKey">
             <ProductDetail></ProductDetail>
+          </Route>
+
+          <Route path="*">
+            <Error404></Error404>
           </Route>
         </Switch>
       </Router>
