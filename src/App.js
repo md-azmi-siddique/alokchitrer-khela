@@ -7,38 +7,38 @@ import Error404 from "./Components/Error404/Error404";
 import FeatureProducts from "./Components/FeatureProducts/FeatureProducts";
 import ProductDetail from "./Components/ProductDetail/ProductDetail";
 
-import data from "./Data/carouselItemData.json";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import data from "./Data/carouselItemData.json";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [carouselItem, setCarouselItem] = useState([]);
+  const [product, setProduct] = useState([]);
   useEffect(() => {
-    setCarouselItem(data);
+    fetch(
+      "https://raw.githubusercontent.com/ProgrammingHero1/ema-john-simple-resources/master/fakeData/products.JSON"
+    )
+      .then((response) => response.json())
+      .then((data) => {setProduct(data);
+      });
   }, []);
 
   return (
     <div>
       <Header></Header>
-
       <Router>
-        <Switch>
-          <Route exact path="/">
-            <HeroDesign carouselItem={carouselItem}></HeroDesign>
-            <CardItem cardItemList={carouselItem}></CardItem>
-            <FeatureProducts featureItem={carouselItem}></FeatureProducts>
-          </Route>
-          <Route path="/FeaturedProducts">
-            <FeatureProducts featureItem={carouselItem}></FeatureProducts>
-          </Route>
-          <Route path="/product/:productKey">
-            <ProductDetail></ProductDetail>
-          </Route>
+      <Routes>
+        <Route exact path="/" element={
+          <>
+          <HeroDesign carouselItem={product}></HeroDesign>
+          <CardItem cardItemList={product}></CardItem>
+          <FeatureProducts featureItem={product}></FeatureProducts>
+          </>
+        } />
+        <Route path="/FeaturedProducts" element={<FeatureProducts featureItem={product}></FeatureProducts>} />
+        <Route path="/product/:productKey" element={<ProductDetail></ProductDetail>} />
+        <Route path="*" element={<Error404></Error404>} />
+      </Routes>  
+    </Router>
 
-          <Route path="*">
-            <Error404></Error404>
-          </Route>
-        </Switch>
-      </Router>
     </div>
   );
 }
