@@ -12,6 +12,7 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
 
 function Header() {
+
   return (
     <div className="header">
       {["sm"].map((expand) => (
@@ -71,8 +72,8 @@ function Header() {
                 </Form>
                 <button className="button-primary">
                 <FontAwesomeIcon icon={faCartShopping} size="lg" style={{ color: "#c59716" }} />
-                <span class="badge bg-secondary">0</span>
-                </button>
+                <span className="badge bg-secondary">0</span>
+              </button>
 
               </Offcanvas.Body>
             </Navbar.Offcanvas>

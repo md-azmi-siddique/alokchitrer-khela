@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-import './ProductDetail.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import "./ProductDetail.css";
 // import FeatureProducts from "../FeatureProducts/FeatureProducts";
 
 const ProductDetail = () => {
@@ -24,12 +24,25 @@ const ProductDetail = () => {
         console.error("Error fetching data:", error);
       });
   }, [productKey]);
-  console.log("this is" + product);
+  // console.log("this is" + product);
+
+  const [cartProduct, setCartProduct] = useState([]);
+  //button function to cart
+  const addToCart = (item) => {
+    // console.log("product added");
+    // console.log(item);
+    const newCart = [...cartProduct, item];
+    setCartProduct(newCart);
+  };
 
   return (
     <div className="container">
       <div className="card mb-3 card-body">
-        <img src={product.img} className="img-fluid img-thumbnail rounded mx-auto" alt="..." />
+        <img
+          src={product.img}
+          className="img-fluid img-thumbnail rounded mx-auto"
+          alt="..."
+        />
         <div className="card-body">
           <h5 className="card-title">{product.seller}</h5>
           <p className="card-text">{product.name}</p>
@@ -38,7 +51,9 @@ const ProductDetail = () => {
               <b>Only {product.stock} items left, Hurry UP!!</b>
             </small>
           </p>
-          <button className="button"><FontAwesomeIcon icon={faCartShopping} /> Add to Cart</button>
+          <button onAbort={addToCart} className="button">
+            <FontAwesomeIcon icon={faCartShopping} /> Add to Cart
+          </button>
         </div>
       </div>
     </div>
