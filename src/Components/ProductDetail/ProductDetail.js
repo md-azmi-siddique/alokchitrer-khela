@@ -1,6 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import './ProductDetail.css'
 // import FeatureProducts from "../FeatureProducts/FeatureProducts";
 
@@ -36,6 +38,7 @@ const ProductDetail = () => {
               <b>Only {product.stock} items left, Hurry UP!!</b>
             </small>
           </p>
+          <button className="button"><FontAwesomeIcon icon={faCartShopping} /> Add to Cart</button>
         </div>
       </div>
     </div>
