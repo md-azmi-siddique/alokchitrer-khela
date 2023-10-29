@@ -10,8 +10,10 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
+import { useCart } from "../CartContext/CartContext"; // Import the useCart hook
 
 function Header() {
+  const { cart } = useCart();
 
   return (
     <div className="header">
@@ -70,11 +72,11 @@ function Header() {
                     Search
                   </Button>
                 </Form>
+                
                 <button className="button-primary">
-                <FontAwesomeIcon icon={faCartShopping} size="lg" style={{ color: "#c59716" }} />
-                <span className="badge bg-secondary">0</span>
-              </button>
-
+        <FontAwesomeIcon icon={faCartShopping} size="lg" style={{ color: "#c59716" }} />
+        <span className="badge bg-secondary">{cart.length}</span> {/* Display cart length */}
+      </button>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           

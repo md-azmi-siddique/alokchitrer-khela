@@ -7,14 +7,12 @@
   /* box-shadow: 10px 10px lightblue; */
 }
 
-.custom-carousel-image{
+.custom-carousel-image {
   margin-top: 35px;
   margin-bottom: 35px;
   width: 1200px !important;
   height: 400px !important;
 }
-
-
 
 .centered-content {
   display: flex;
