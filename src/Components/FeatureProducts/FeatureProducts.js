@@ -8,7 +8,7 @@ const FeatureProducts = (props) => {
 
   return (
     <>
-      <div className="container">
+      <div className="container featureProduct">
         <h1>Featured Products</h1>
         <div className="d-flex flex-row mb-3 justify-content-center align-content-start flex-wrap">
           <div className="row row-cols-4 g-4">

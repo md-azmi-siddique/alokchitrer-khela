@@ -1,23 +1,44 @@
-img {
-  height: 100px;
+.header .header-item{
+  text-decoration: none;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.header .header-item:hover{
+  color: wheat
 }
 .header{
-  font-size: large;
-  font-weight: bold;
+  margin-bottom: 100px;
+}
+.navbar-heading {
+  margin-top: 5px;
 }
 
-.button-primary{
-  background-color: transparent; 
-  border: none;
-  margin-left: 20px;
-  margin-right: 25px;
+/* In your CSS file */
+.custom-dropdown-title .nav-link {
+  color: #8bb9fe; /* Change the color to the desired color */
+  font-weight: bolder;
 }
 
-.button-primary:hover{
-  background-color: whitesmoke;
+
+img {
+  height: 50px;
+  border-radius: 20px;
+  margin-left: 75px;
 }
 
-/* Header.css */
-/* .custom-navbar {
-  background-color: red !important; 
-} */
+.search-box {
+  margin-right: 75px;
+}
+
+Nav.Link {
+  margin-left: 1000px;
+}
+
+@media (max-width: 768px) {
+  .custom-navbar .mobile-link {
+    color: red; /* Set your desired font color for mobile devices */
+  }
+}
+
+
