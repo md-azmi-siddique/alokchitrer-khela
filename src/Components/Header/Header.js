@@ -18,7 +18,7 @@ function Header() {
           data-bs-theme="dark"
           key={expand}
           expand={expand}
-          className="custom-navbar bg-body-tertiary mb-3"
+          className="custom-navbar"
           id="navBar"
         >
           <Container fluid>

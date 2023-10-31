@@ -1,3 +1,7 @@
+.custom-navbar{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 12%, rgba(9,9,121,1) 38%, rgba(9,9,121,1) 55%, rgba(0,212,255,1) 96%);
+}
+
 .header .header-item{
   text-decoration: none;
   font-weight: bold;
