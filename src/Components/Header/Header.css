@@ -1,5 +1,5 @@
 .header{
-  /* margin-bottom: 100px; */
+  margin-bottom: 100px;
 }
 
 .custom-navbar{
@@ -36,7 +36,7 @@ img {
 
 
 .custom-offCanvas {
-  background: red!important; 
+  background: wheat !important; 
 }
 .custom-offCanvas a{
   text-decoration: none;

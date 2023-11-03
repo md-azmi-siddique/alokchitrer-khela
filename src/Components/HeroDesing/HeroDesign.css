@@ -1,12 +1,11 @@
 .heroSlide {
-  margin-top: 50px;
+  margin-top: 0px;
   /* background-color: black; */
-  background-color: skyblue;
-  /* background-color:  yellowgreen; */
+  /* background-color: skyblue; */
+  border-radius: 20px;
   /* border: 1px solid black; */
   /* box-shadow: 10px 10px lightblue; */
 }
-
 
 .custom-carousel-image {
   margin-top: 35px;

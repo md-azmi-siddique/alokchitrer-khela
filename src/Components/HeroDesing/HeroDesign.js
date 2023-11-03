@@ -7,9 +7,12 @@ const HeroDesign = (props) => {
   // console.log(carouselItem)
 
   return (
-    <div className="heroSlide">
-    <div className="container">
-      <Carousel defaultActiveIndex={1} interval={1000} className="custom-carousel">
+    <div className="container heroSlide">
+      <Carousel
+        defaultActiveIndex={1}
+        interval={1000}
+        className="custom-carousel"
+      >
         {carouselItem.slice(0,5).map(item => (
           <Carousel.Item className="custom-carousel-item" key={item.key}>
             <div className="centered-content">
@@ -22,7 +25,6 @@ const HeroDesign = (props) => {
           </Carousel.Item>
         ))}
       </Carousel>
-    </div>
     </div>
   );
 };
