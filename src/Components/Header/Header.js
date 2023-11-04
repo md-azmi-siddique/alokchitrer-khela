@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import logo from '../../Assets/images/NavLogo/logo.png';
 import { Link } from 'react-router-dom';
 import './Header.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+
 
 function Header() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -57,8 +60,6 @@ function Header() {
             </div>
           </div>
         </div>
-        
-        
       </div>
       <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div className="container-fluid">
@@ -91,6 +92,8 @@ function Header() {
               <li className="nav-item"><Link to="/work" className="nav-link">Work</Link></li>
               <li className="nav-item"><Link to="/blog" className="nav-link">Blog</Link></li>
               <li className="nav-item"><Link to="/contact" className="nav-link">Contact</Link></li>
+              <li className="nav-item"><Link to="/contact" className="nav-link"><FontAwesomeIcon icon={faCartShopping} beatFade size="xl" /></Link></li>
+              
             </ul>
           </div>
         </div>
