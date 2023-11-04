@@ -6,13 +6,13 @@
  */
 
  img{
-  height: 75px;
+  height: 50px;
  }
 
  .ftco-section{
-  border: 1px solid red;
-  padding: 0px !important;
+  padding: 10px 0px !important;
  }
+ 
  :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -8376,3 +8376,29 @@ h1, h2, h3, h4, h5,
   border: 1px solid rgba(0, 0, 0, 0.1); }
   .form-control:focus, .form-control:active {
     border-color: #000; }
+
+/* Custom CSS for the dropdown */
+.custom-dropdown {
+  position: relative;
+}
+
+.custom-dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 10px; /* Adjust this value to control the distance between the navbar and the dropdown */
+}
+
+/* Remove underlines from social media links */
+.social-media a {
+  text-decoration: none;
+}
+
+/* If you want to remove underlines from all links in the header, you can do it like this */
+#ftco-navbar a {
+  text-decoration: none;
+}
+
+.hidden-on-mobile {
+  display: none;
+}
