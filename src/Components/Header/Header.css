@@ -8399,6 +8399,11 @@ h1, h2, h3, h4, h5,
   text-decoration: none;
 }
 
-.hidden-on-mobile {
-  display: none;
+/* Add this CSS to your stylesheet or in a <style> tag in your component */
+.dropdown-item {
+  transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+.dropdown-item:hover {
+  background-color: red; /* Change the background color on hover */
 }

@@ -1,26 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import logo from '../../Assets/images/NavLogo/logo.png';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Container from 'react-bootstrap/Container';
-import FeatureProducts from './../FeatureProducts/FeatureProducts';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
-
-  const handleDropdownMouseEnter = () => {
-    setDropdownOpen(true);
-  };
-
-  const handleDropdownMouseLeave = () => {
-    setDropdownOpen(false);
-  };
 
   return (
     <>
@@ -76,6 +66,7 @@ function Header() {
             id={`offcanvasNavbar-expand-${expand}`}
             aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
             placement="end"
+            style={{ backgroundColor: '#252525', color:'white' }}
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
@@ -86,7 +77,6 @@ function Header() {
               <Nav className="justify-content-center flex-grow-1 pe-3">
               <li className="nav-item active"><Link to="/" className="nav-link">Home</Link></li>
                 <NavDropdown title="Catagories" id={`offcanvasNavbarDropdown-expand-${expand}`}>
-                  
                   <Link to="#" className="dropdown-item">Battery</Link>
                   <Link to="#" className="dropdown-item">Charger</Link>
                   <Link to="#" className="dropdown-item">Cleaning Accessories</Link>
@@ -106,6 +96,7 @@ function Header() {
           </Container>
       </Navbar>
     ))}
+    
     </>
   );
 }
