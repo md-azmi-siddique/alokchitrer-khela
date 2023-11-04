@@ -35,10 +35,10 @@ function App() {
               <>
                 {/* <HeaderDemo></HeaderDemo> */}
                 <Header></Header>
-                <HeroDesign carouselItem={product}></HeroDesign>
+                {/* <HeroDesign carouselItem={product}></HeroDesign>
                 <CardItem cardItemList={product}></CardItem>
                 <FeatureProducts featureItem={product}></FeatureProducts>
-                <ContactUs></ContactUs>
+                <ContactUs></ContactUs> */}
               </>
             }
           />
