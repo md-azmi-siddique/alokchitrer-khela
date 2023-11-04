@@ -7,6 +7,7 @@ import Error404 from "./Components/Error404/Error404";
 import FeatureProducts from "./Components/FeatureProducts/FeatureProducts";
 import ProductDetail from "./Components/ProductDetail/ProductDetail";
 
+
 // import data from "./Data/carouselItemData.json";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ContactUs from './Components/ContactUs/ContactUs';
@@ -32,11 +33,12 @@ function App() {
             path="/"
             element={
               <>
+                {/* <HeaderDemo></HeaderDemo> */}
                 <Header></Header>
-                <HeroDesign carouselItem={product}></HeroDesign>
+                {/* <HeroDesign carouselItem={product}></HeroDesign>
                 <CardItem cardItemList={product}></CardItem>
                 <FeatureProducts featureItem={product}></FeatureProducts>
-                <ContactUs></ContactUs>
+                <ContactUs></ContactUs> */}
               </>
             }
           />

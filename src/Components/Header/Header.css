@@ -29,9 +29,14 @@
 
 
 img {
-  height: 50px;
+  height: 100px;
   border-radius: 20px;
-  margin-left: 75px;
+  margin-left: 50px;
+}
+
+.searchBox{
+  width: 100%;
+  max-width: 800px !important;
 }
 
 
@@ -52,13 +57,5 @@ img {
   margin-left: auto;
 }
 
-
-
-
-@media (max-width: 500px) {
-  .custom-navbar .mobile-link {
-    color: red; 
-  }
-}
 
 

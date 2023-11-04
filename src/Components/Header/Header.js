@@ -3,6 +3,11 @@ import logo from "../../Assets/images/NavLogo/logo.png";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import "./Header.css";
@@ -11,25 +16,29 @@ function Header() {
   return (
     <div className="header">
       {["md"].map((expand) => (
-        <Navbar fixed="top" data-bs-theme="dark" key={expand} expand={expand} className="custom-navbar" id="navBar">
+        <Navbar fixed="top"  key={expand} expand={expand} className="custom-navbar" id="navBar">
           <Container fluid>
-            <Navbar.Brand>
-              <img src={logo} alt="" />
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-            <Navbar.Offcanvas className="custom-offCanvas" id={`offcanvasNavbar-expand-${expand}`} aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`} placement="end">
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  <img src={logo} alt="" />
-                </Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body className="custom-offcanvas-body">
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link><Link className="header-item custom-link" to="/">Home</Link></Nav.Link>
-                  <Nav.Link><Link className="header-item custom-link"to="/FeaturedProducts">Featured Products</Link></Nav.Link>
-                </Nav>
-              </Offcanvas.Body>
-            </Navbar.Offcanvas>
+          <Navbar.Brand href="#home">
+            <img src={logo} alt="" />
+          </Navbar.Brand>
+          <Nav className="me-auto">
+          <Form inline>
+        <Row>
+          <Col xs="auto">
+            <Form.Control
+              type="text"
+              placeholder="Search"
+              className=" mr-sm-2 searchBox"
+              style={{width:'800px'}}
+            />
+          </Col>
+          <Col xs="auto">
+            
+          </Col>
+        </Row>
+      </Form>
+            
+          </Nav>
           </Container>
         </Navbar>
       ))}
