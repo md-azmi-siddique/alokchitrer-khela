@@ -76,7 +76,7 @@ function Header() {
             <Offcanvas.Body>
               <Nav className="justify-content-center flex-grow-1 pe-3">
               <li className="nav-item active"><Link to="/" className="nav-link">Home</Link></li>
-                <NavDropdown title="Catagories" id={`offcanvasNavbarDropdown-expand-${expand}`}>
+                <NavDropdown title="Catagories" id='categories-dropdown'>
                   <Link to="#" className="dropdown-item">Battery</Link>
                   <Link to="#" className="dropdown-item">Charger</Link>
                   <Link to="#" className="dropdown-item">Cleaning Accessories</Link>
@@ -87,7 +87,7 @@ function Header() {
                   <Link to="#" className="dropdown-item">Strap</Link>
                   <Link to="#" className="dropdown-item">Other Accessories</Link>
                 </NavDropdown>
-                <li className="nav-item"><Link to="/" className="nav-link">Feature Products</Link></li>
+                <li className="nav-item"><Link to="/FeaturedProducts" className="nav-link">Feature Products</Link></li>
                 <li className="nav-item"><Link to="/" className="nav-link">Contact</Link></li>
                 <li className="nav-item"><Link to="/contact" className="nav-link"><FontAwesomeIcon icon={faCartShopping} beatFade size="xl" /></Link></li>
               </Nav>

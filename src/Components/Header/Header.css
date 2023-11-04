@@ -8402,8 +8402,14 @@ h1, h2, h3, h4, h5,
 /* Add this CSS to your stylesheet or in a <style> tag in your component */
 .dropdown-item {
   transition: background-color 0.3s; /* Add a smooth transition effect */
+  font-weight: bold;
 }
 
 .dropdown-item:hover {
   background-color: red; /* Change the background color on hover */
 }
+/* Your stylesheet.css */
+.navbar-nav .nav-item:hover .dropdown-menu{
+  display: block;
+}
+
