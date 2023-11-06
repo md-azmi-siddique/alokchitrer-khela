@@ -38,8 +38,13 @@ const HeroDesign = (props) => {
         <SwiperSlide>
           <div class="container">
             <div class="row">
-              <div class="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}}>{item.name}</div>
-              <div class="col-md-6" ><img style={{marginLeft:'auto', marginRight:'auto'}} className='imgSlide' src={item.img} alt="" /></div>
+              <div class="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}}>
+                <h1>{item.seller}</h1>
+                {item.name}
+              </div>
+              <div class="col-md-6" >
+                <img style={{marginLeft:'auto', marginRight:'auto', width:"450" ,height:"450"}} className='imgSlide responsive' src={item.img} alt="" />
+              </div>
             </div>
           </div>
         </SwiperSlide>

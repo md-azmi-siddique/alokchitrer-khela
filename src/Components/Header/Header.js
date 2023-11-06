@@ -13,9 +13,9 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 function Header() {
 
   return (
-    <>
+    <div className='header' style={{ position: 'fixed', top: 0, width: '100%', zIndex: 999 }}>
     <section className="ftco-section">
-      <div className="container-fluid px-md-5">
+      <div className="container-fluid px-md-5" style={{background:'white',marginTop:'-10px', paddingTop: '10px'}}>
         {/* ... Your existing code for logo, search form, and social media links */}
         <div className="row justify-content-between">
           <div className="col-md-8 order-md-last">
@@ -59,7 +59,7 @@ function Header() {
       </div>
     </section>
     {['lg'].map((expand) => (
-      <Navbar key={expand} expand={expand} className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <Navbar key={expand} expand={expand} className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style={{marginTop:'-30px'}}>
         <Container fluid>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Offcanvas
@@ -97,7 +97,7 @@ function Header() {
       </Navbar>
     ))}
     
-    </>
+    </div>
   );
 }
 

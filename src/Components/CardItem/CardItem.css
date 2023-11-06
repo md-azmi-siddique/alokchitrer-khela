@@ -1,16 +1,27 @@
-.heading{
+.categoryItem{
   text-align: center;
   font-weight: bold;
+  margin-top: 20px;
 }
 
 /* .container{
   border: 1px solid red;
 } */
 
+.productCategory a{
+  text-decoration: none;
+  color: black
+}
+
+.productCategory a:hover{
+  text-decoration: none;
+  color: red;
+  transform: scale(1.2);
+}
 .category{
   /* border: 2px solid red !important; */
   box-shadow: gray ;
-  margin: 2px !important;
+  margin: 5px !important;
 }
 
 .category h5{
