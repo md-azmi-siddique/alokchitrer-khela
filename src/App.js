@@ -6,12 +6,20 @@ import CardItem from "./Components/CardItem/CardItem";
 import Error404 from "./Components/Error404/Error404";
 import FeatureProducts from "./Components/FeatureProducts/FeatureProducts";
 import ProductDetail from "./Components/ProductDetail/ProductDetail";
+<<<<<<< HEAD
 import ContactUs from "./Components/ContactUs/ContactUs";
 
 // import data from "./Data/carouselItemData.json";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Laptop from "./Components/Laptop/Laptop";
 import Android from "./Components/Android/Android";
+=======
+import ContactUs from './Components/ContactUs/ContactUs';
+
+
+// import data from "./Data/carouselItemData.json";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+>>>>>>> d8442248f1c6da61cb543ef861ad1a01eca56270
 
 
 function App() {

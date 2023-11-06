@@ -13,8 +13,12 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 function Header() {
 
   return (
+<<<<<<< HEAD
     <div className='header' 
     style={{ position: 'fixed', top: 0, width: '100%', zIndex: 999 }}>
+=======
+    <div className='header' style={{ position: 'fixed', top: 0, width: '100%', zIndex: 999 }}>
+>>>>>>> d8442248f1c6da61cb543ef861ad1a01eca56270
     <section className="ftco-section">
       <div className="container-fluid px-md-5" style={{background:'white',marginTop:'-10px', paddingTop: '10px'}}>
         {/* ... Your existing code for logo, search form, and social media links */}
