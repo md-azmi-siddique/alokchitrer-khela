@@ -5,9 +5,15 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+ .header{
+  border: 1px solid red;
+  margin-bottom: 200px !important;
+ }
+
  img{
   height: 50px;
  }
+
 
  .ftco-section{
   padding: 10px 0px !important;

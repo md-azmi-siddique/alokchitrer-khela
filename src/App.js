@@ -6,11 +6,13 @@ import CardItem from "./Components/CardItem/CardItem";
 import Error404 from "./Components/Error404/Error404";
 import FeatureProducts from "./Components/FeatureProducts/FeatureProducts";
 import ProductDetail from "./Components/ProductDetail/ProductDetail";
-
+import ContactUs from "./Components/ContactUs/ContactUs";
 
 // import data from "./Data/carouselItemData.json";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ContactUs from './Components/ContactUs/ContactUs';
+import Laptop from "./Components/Laptop/Laptop";
+import Android from "./Components/Android/Android";
+
 
 function App() {
   const [product, setProduct] = useState([]);
@@ -33,12 +35,11 @@ function App() {
             path="/"
             element={
               <>
-                {/* <HeaderDemo></HeaderDemo> */}
                 <Header></Header>
-                {/* <HeroDesign carouselItem={product}></HeroDesign>
+                <HeroDesign carouselItem={product}></HeroDesign>
                 <CardItem cardItemList={product}></CardItem>
                 <FeatureProducts featureItem={product}></FeatureProducts>
-                <ContactUs></ContactUs> */}
+                <ContactUs></ContactUs>
               </>
             }
           />
@@ -48,6 +49,7 @@ function App() {
               <>
                 <Header></Header>
                 <FeatureProducts featureItem={product}></FeatureProducts>
+                <ContactUs></ContactUs>
               </>
             }
           />
@@ -57,6 +59,26 @@ function App() {
               <>
                 <Header></Header>
                 <ProductDetail></ProductDetail>
+              </>
+            }
+          />
+          <Route
+            path="/laptop"
+            element={
+              <>
+                <Header></Header>
+                <Laptop laptop={product}></Laptop>
+                <ContactUs></ContactUs>
+              </>
+            }
+          />
+          <Route
+            path="/android"
+            element={
+              <>
+                <Header></Header>
+                <Android android={product}></Android>
+                <ContactUs></ContactUs>
               </>
             }
           />

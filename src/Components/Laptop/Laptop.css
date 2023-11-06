@@ -1,0 +1,14 @@
+/* span{
+    color: black;
+    font-weight: bolder;
+}
+*/
+.laptopProduct{
+    margin-top: 250px;
+}
+.laptopProduct img{
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
+} 
